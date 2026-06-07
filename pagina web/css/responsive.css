@@ -1,0 +1,77 @@
+/* --- Responsive CSS --- */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .problems-grid {
+    gap: 1rem;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  
+  .nav-links {
+    display: none; /* Hide for mobile, can add a menu later */
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .hero {
+    padding-top: 100px;
+    background-attachment: scroll; /* Disable parallax on mobile */
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .strategy-steps {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .strategy-steps::before {
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 4px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+  
+  .step-card {
+    width: 100%;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .map-container {
+    height: 400px;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+  }
+}
