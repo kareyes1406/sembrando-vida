@@ -1,0 +1,155 @@
+/* Google Fonts: Bebas Neue, Caveat, Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Colors - Moselhaus Style */
+  --bg-cream: #F1F4E6;
+  --bg-cream-dark: #E6EAD5;
+  --olive-green: #819B4C;
+  --olive-green-light: #94AF5B;
+  --dark-forest: #232B1E;
+  --dark-forest-soft: #384231;
+  --white: #FFFFFF;
+  
+  --primary: var(--olive-green);
+  --primary-light: var(--olive-green-light);
+  --secondary: var(--olive-green);
+  --accent: var(--olive-green);
+  --bg-light: var(--bg-cream);
+  --bg-alt: var(--bg-cream-dark);
+  --dark: var(--dark-forest);
+  --dark-soft: var(--dark-forest-soft);
+
+  /* Typography */
+  --font-heading: 'Bebas Neue', cursive; /* Bebas Neue is sans-serif but often classified as display */
+  --font-body: 'Open Sans', sans-serif;
+  --font-accent: 'Caveat', cursive;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Shadows - Minimalist/Editorial */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: 0 4px 12px rgba(35, 43, 30, 0.15); /* Soft shadow for image overlapping */
+
+  /* Border Radius - Moselhaus style uses pill buttons but square images */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 50px; /* For buttons */
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-out;
+  --transition-normal: 0.3s ease-out;
+  --transition-slow: 0.5s ease-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1;
+  color: var(--dark);
+  font-weight: 400; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+}
+
+h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+  font-size: 1rem;
+  color: var(--dark-soft);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--dark);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-padding {
+  padding: var(--space-xl) 0;
+}
+
+.bg-alt {
+  background: var(--bg-alt);
+  position: relative;
+}
+
+/* Typography styles */
+.text-accent {
+  font-family: var(--font-accent);
+  font-style: normal;
+  color: var(--primary);
+  font-size: 2.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.text-muted {
+  color: var(--dark-soft);
+}
